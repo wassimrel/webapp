@@ -23,7 +23,7 @@ pipeline {
           sshagent(['Tomcat-cred']) {
              sh """
                scp -o StrictHostKeyChecking=no target/*.war ubuntu@18.224.110.160:/home/ubuntu
-               ssh -o StrictHostKeyChecking=no ubuntu@18.224.110.160 'cp -r /home/ubuntu/*.war /opt/tomcat/webapp.war'
+               ssh -o StrictHostKeyChecking=no ubuntu@18.224.110.160 'cp -r /home/ubuntu/*.war /opt/tomcat/webapps/webapp.war'
              """
           }
        }
